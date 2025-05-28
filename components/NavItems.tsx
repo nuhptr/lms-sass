@@ -1,21 +1,24 @@
-import { cn } from "@/lib/utils";
+"use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Props = {};
+import { cn } from "@/lib/utils";
 
-const navItemns = [
+const navItems = [
      { label: "Home", href: "/" },
      { label: "Companions", href: "/companions" },
      { label: "My Journey", href: "/my-journey" },
 ];
 
-export const NavItems = (props: Props) => {
+type Props = {};
+
+export const NavItems = ({}: Props) => {
      const pathname = usePathname();
 
      return (
-          <nav className="flex items-center gap-4">
-               {navItemns.map(({ label, href }) => (
+          <nav className="flex items-center gap-10">
+               {navItems.map(({ label, href }) => (
                     <Link
                          key={label}
                          href={href}
