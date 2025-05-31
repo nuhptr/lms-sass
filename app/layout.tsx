@@ -5,31 +5,29 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
 const bricolage = Bricolage_Grotesque({
-     variable: "--font-bricolage",
-     subsets: ["latin"],
+    variable: "--font-bricolage",
+    subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-     title: "Thinker Academy",
-     description: "A platform for learning and growth",
-     openGraph: {
-          title: "Thinker Academy",
-          description: "A platform for learning and growth",
-          writers: "Adi Nugraha Putra",
-     },
+    title: "Thinker Academy",
+    description: "A platform for learning and growth",
+    openGraph: {
+        title: "Thinker Academy",
+        description: "A platform for learning and growth",
+        writers: "Adi Nugraha Putra",
+    },
 };
 
 export default function RootLayout({
-     children,
-}: Readonly<{
-     children: React.ReactNode;
-}>) {
-     return (
-          <html lang="en">
-               <body className={`${bricolage.variable} antialiased`}>
-                    <Navbar />
-                    {children}
-               </body>
-          </html>
-     );
+    children,
+}: Readonly<{ children: React.ReactNode }>) {
+    return (
+        <html lang="en">
+            <body className={`${bricolage.variable} antialiased`}>
+                <Navbar />
+                {children}
+            </body>
+        </html>
+    );
 }

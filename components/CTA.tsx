@@ -1,5 +1,5 @@
 type Props = {};
 
 export const CTA = ({}: Props) => {
-     return <div>CTA</div>;
+    return <div>CTA</div>;
 };
